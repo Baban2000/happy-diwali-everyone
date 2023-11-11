@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .diwali-container {
+    position: relative;
+  }
+  
+  .cracker {
+    width: 50px;
+    height: 100px;
+    background-color: #f00;
+    position: absolute;
+    border-radius: 0 0 50% 50%;
+    cursor: pointer;
+  }
+  
+  .burst {
+    animation: burst-animation 0.5s ease-in-out;
+  }
+  
+  @keyframes burst-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+      background-color: #ffcc00;
+    }
+    100% {
+      transform: scale(1);
+      background-color: #f00;
+    }
+  }
+  

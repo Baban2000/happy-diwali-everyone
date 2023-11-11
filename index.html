@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #212121; /* Dark background color */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #name {
+            width: 300px;
+            text-align: center;
+        }
+
+        #submit {
+            background-color: #f8d41a; /* Diwali color, you can change this */
+            color: black;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            background-color: #ff6347; /* Another Diwali color on hover, you can change this */
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Diwali!</h1>
+    <p>Enter your name to celebrate with me.</p>
+    <input type="text" id="name" placeholder="Enter Your Name">
+    <br>
+    <input type="submit" id="submit" name="submit" value="Submit">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Handle the click event for the submit button
+            $("#submit").click(function () {
+                // Get the value from the input field
+                var name = $("#name").val();
+
+                // Redirect to "diwali.html" with the name as a query parameter
+                window.location.href = "diwali.html?name=" + encodeURIComponent(name);
+            });
+        });
+    </script>
+</body>
+</html>
